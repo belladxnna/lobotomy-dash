@@ -71,7 +71,7 @@ lobotomy2.alpha = 0.001;
 var spikes = [0, 0, 0].map(function(_, i) {
   var spike = createSprite(50 * i, game.player.start_pos.y);
 
-  spike.setCollider("rectangle", 0, 0, 50, 50, 0);
+  spike.setCollider("rectangle", 0, 0, spike.width, spike.height, 0);
 
   spike.setAnimation("spike");
   spike.alpha = 0;
@@ -113,7 +113,7 @@ function draw() {
     player_jumping = true;
 
     player.velocityY = -5;
-    player.rotationSpeed = 5.5;
+    player.rotationSpeed = 6.5;
   }
     
   if (!(player.y > game.player.start_pos.y - 100))
